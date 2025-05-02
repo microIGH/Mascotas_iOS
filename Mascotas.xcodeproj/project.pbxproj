@@ -7,22 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D1192FB2DBD42F100D809C3 /* Mascotas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D1192F92DBD42F100D809C3 /* Mascotas.xcdatamodeld */; };
+		3D1193002DBD46E100D809C3 /* Mascota+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1192FC2DBD46E100D809C3 /* Mascota+CoreDataClass.swift */; };
+		3D1193012DBD46E100D809C3 /* Mascota+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1192FD2DBD46E100D809C3 /* Mascota+CoreDataProperties.swift */; };
+		3D1193022DBD46E100D809C3 /* Responsable+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1192FE2DBD46E100D809C3 /* Responsable+CoreDataClass.swift */; };
+		3D1193032DBD46E100D809C3 /* Responsable+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1192FF2DBD46E100D809C3 /* Responsable+CoreDataProperties.swift */; };
+		3D1193052DBD4B8C00D809C3 /* ResponsableVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1193042DBD4B8C00D809C3 /* ResponsableVO.swift */; };
+		3D1193072DBD4C7200D809C3 /* MascotaVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1193062DBD4C7200D809C3 /* MascotaVO.swift */; };
+		3D1193092DBD54E500D809C3 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1193082DBD54E500D809C3 /* DataManager.swift */; };
+		3D11930B2DC43A2900D809C3 /* ResumenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11930A2DC43A2900D809C3 /* ResumenView.swift */; };
+		3D11930D2DC4416200D809C3 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11930C2DC4416200D809C3 /* TableViewController.swift */; };
+		3D11930F2DC441BC00D809C3 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11930E2DC441BC00D809C3 /* DetailView.swift */; };
+		3D1193112DC4522700D809C3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1193102DC4522700D809C3 /* DetailViewController.swift */; };
 		3DBDD8122DBD407400842729 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBDD8112DBD407400842729 /* AppDelegate.swift */; };
 		3DBDD8142DBD407400842729 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBDD8132DBD407400842729 /* SceneDelegate.swift */; };
 		3DBDD8162DBD407400842729 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBDD8152DBD407400842729 /* ViewController.swift */; };
 		3DBDD8192DBD407400842729 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBDD8172DBD407400842729 /* Main.storyboard */; };
-		3DBDD81C2DBD407400842729 /* Mascotas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DBDD81A2DBD407400842729 /* Mascotas.xcdatamodeld */; };
 		3DBDD81E2DBD407800842729 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DBDD81D2DBD407800842729 /* Assets.xcassets */; };
 		3DBDD8212DBD407800842729 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBDD81F2DBD407800842729 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D1192FA2DBD42F100D809C3 /* Sesion8.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sesion8.xcdatamodel; sourceTree = "<group>"; };
+		3D1192FC2DBD46E100D809C3 /* Mascota+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mascota+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3D1192FD2DBD46E100D809C3 /* Mascota+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mascota+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3D1192FE2DBD46E100D809C3 /* Responsable+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Responsable+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3D1192FF2DBD46E100D809C3 /* Responsable+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Responsable+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3D1193042DBD4B8C00D809C3 /* ResponsableVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsableVO.swift; sourceTree = "<group>"; };
+		3D1193062DBD4C7200D809C3 /* MascotaVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MascotaVO.swift; sourceTree = "<group>"; };
+		3D1193082DBD54E500D809C3 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		3D11930A2DC43A2900D809C3 /* ResumenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumenView.swift; sourceTree = "<group>"; };
+		3D11930C2DC4416200D809C3 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		3D11930E2DC441BC00D809C3 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		3D1193102DC4522700D809C3 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3DBDD80E2DBD407400842729 /* Mascotas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mascotas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DBDD8112DBD407400842729 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DBDD8132DBD407400842729 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3DBDD8152DBD407400842729 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3DBDD8182DBD407400842729 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3DBDD81B2DBD407400842729 /* Mascotas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mascotas.xcdatamodel; sourceTree = "<group>"; };
 		3DBDD81D2DBD407800842729 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DBDD8202DBD407800842729 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DBDD8222DBD407800842729 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,16 +80,51 @@
 		3DBDD8102DBD407400842729 /* Mascotas */ = {
 			isa = PBXGroup;
 			children = (
+				3DBDD82A2DBD413200842729 /* Controller */,
+				3DBDD8292DBD412600842729 /* View */,
+				3DBDD8282DBD411500842729 /* Model */,
+				3DBDD81D2DBD407800842729 /* Assets.xcassets */,
+				3DBDD8222DBD407800842729 /* Info.plist */,
+			);
+			path = Mascotas;
+			sourceTree = "<group>";
+		};
+		3DBDD8282DBD411500842729 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3D1192FC2DBD46E100D809C3 /* Mascota+CoreDataClass.swift */,
+				3D1192FD2DBD46E100D809C3 /* Mascota+CoreDataProperties.swift */,
+				3D1192FE2DBD46E100D809C3 /* Responsable+CoreDataClass.swift */,
+				3D1192FF2DBD46E100D809C3 /* Responsable+CoreDataProperties.swift */,
+				3D1192F92DBD42F100D809C3 /* Mascotas.xcdatamodeld */,
+				3D1193042DBD4B8C00D809C3 /* ResponsableVO.swift */,
+				3D1193062DBD4C7200D809C3 /* MascotaVO.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3DBDD8292DBD412600842729 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3DBDD8172DBD407400842729 /* Main.storyboard */,
+				3DBDD81F2DBD407800842729 /* LaunchScreen.storyboard */,
+				3D11930E2DC441BC00D809C3 /* DetailView.swift */,
+				3D11930A2DC43A2900D809C3 /* ResumenView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3DBDD82A2DBD413200842729 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				3DBDD8112DBD407400842729 /* AppDelegate.swift */,
 				3DBDD8132DBD407400842729 /* SceneDelegate.swift */,
 				3DBDD8152DBD407400842729 /* ViewController.swift */,
-				3DBDD8172DBD407400842729 /* Main.storyboard */,
-				3DBDD81D2DBD407800842729 /* Assets.xcassets */,
-				3DBDD81F2DBD407800842729 /* LaunchScreen.storyboard */,
-				3DBDD8222DBD407800842729 /* Info.plist */,
-				3DBDD81A2DBD407400842729 /* Mascotas.xcdatamodeld */,
+				3D1193082DBD54E500D809C3 /* DataManager.swift */,
+				3D11930C2DC4416200D809C3 /* TableViewController.swift */,
+				3D1193102DC4522700D809C3 /* DetailViewController.swift */,
 			);
-			path = Mascotas;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +198,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DBDD81C2DBD407400842729 /* Mascotas.xcdatamodeld in Sources */,
+				3D1193052DBD4B8C00D809C3 /* ResponsableVO.swift in Sources */,
+				3D11930B2DC43A2900D809C3 /* ResumenView.swift in Sources */,
+				3D11930D2DC4416200D809C3 /* TableViewController.swift in Sources */,
+				3D11930F2DC441BC00D809C3 /* DetailView.swift in Sources */,
+				3D1193072DBD4C7200D809C3 /* MascotaVO.swift in Sources */,
+				3D1193032DBD46E100D809C3 /* Responsable+CoreDataProperties.swift in Sources */,
+				3D1193022DBD46E100D809C3 /* Responsable+CoreDataClass.swift in Sources */,
+				3D1192FB2DBD42F100D809C3 /* Mascotas.xcdatamodeld in Sources */,
 				3DBDD8162DBD407400842729 /* ViewController.swift in Sources */,
 				3DBDD8122DBD407400842729 /* AppDelegate.swift in Sources */,
 				3DBDD8142DBD407400842729 /* SceneDelegate.swift in Sources */,
+				3D1193092DBD54E500D809C3 /* DataManager.swift in Sources */,
+				3D1193112DC4522700D809C3 /* DetailViewController.swift in Sources */,
+				3D1193012DBD46E100D809C3 /* Mascota+CoreDataProperties.swift in Sources */,
+				3D1193002DBD46E100D809C3 /* Mascota+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,13 +437,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		3DBDD81A2DBD407400842729 /* Mascotas.xcdatamodeld */ = {
+		3D1192F92DBD42F100D809C3 /* Mascotas.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				3DBDD81B2DBD407400842729 /* Mascotas.xcdatamodel */,
+				3D1192FA2DBD42F100D809C3 /* Sesion8.xcdatamodel */,
 			);
-			currentVersion = 3DBDD81B2DBD407400842729 /* Mascotas.xcdatamodel */;
-			path = Mascotas.xcdatamodeld;
+			currentVersion = 3D1192FA2DBD42F100D809C3 /* Sesion8.xcdatamodel */;
+			name = Mascotas.xcdatamodeld;
+			path = ../../../../../../../../Downloads/Mascotas.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
