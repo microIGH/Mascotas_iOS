@@ -12,8 +12,15 @@ class TableViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        actualizar()
+        NotificationCenter.default.addObserver(self, selector:#selector(actualizar), name: NSNotification.Name("DELETED_OBJECT"), object:nil)
+    }
+    
+    @objc
+    func actualizar() {
         // TODO: - Obtener todas las mascotas
-        mascotas = DataManager.shared.todasLasMascotas(tipo:"gato")
+        mascotas = DataManager.shared.todasLasMascotas()
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source

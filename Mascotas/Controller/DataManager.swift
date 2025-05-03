@@ -59,7 +59,7 @@ class DataManager : NSObject {
         // validar si la BD ya se sincronizo
         let ud = UserDefaults.standard
         if ud.integer(forKey: "BD-OK") != 1 {
-            if let url = URL (string: "https://my.api.mockaroo.com/mascotas.json?key=ee082920") {
+            if let url = URL (string:"http://janzelaznog.com/DDAM/iOS/mascotas.json") {
                 let sesion = URLSession(configuration:.default)
                 let task = sesion.dataTask(with: URLRequest(url: url)) {
                     datos, respuesta, err in
@@ -97,7 +97,7 @@ class DataManager : NSObject {
     }
     
     func obtenResponsables() {
-        if let laURL = URL(string: "https://my.api.mockaroo.com/responsables.json?key=ee082920") {
+        if let laURL = URL(string: "http://janzelaznog.com/DDAM/iOS/responsables.json") {
             let sesion = URLSession(configuration: .default)
             let tarea = sesion.dataTask(with:URLRequest(url:laURL)) { data, response, error in
                 if error != nil {
@@ -164,14 +164,17 @@ class DataManager : NSObject {
             resumen = "Hay \(cuenta) responsables\n"
             let cuenta2 = try persistentContainer.viewContext.count(for:queryM)
             resumen += "Hay \(cuenta2) mascotas\n"
+            // SELECT tipo, count(id) as cuantos FROM Mascota GROUP BY tipo
+            // gato, 34
+            // perro, 45
             let keypathExp = NSExpression(forKeyPath: "id")
             let expression = NSExpression(forFunction: "count:", arguments: [keypathExp])
             let countDesc = NSExpressionDescription()
             countDesc.expression = expression
-            countDesc.name = "count"
+            countDesc.name = "cuantos"
             countDesc.expressionResultType = .integer64AttributeType
             let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Mascota")
-            request.resultType = .countResultType
+            //request.resultType = .countResultType
             request.returnsObjectsAsFaults = false
             request.propertiesToFetch = ["tipo", countDesc]
             request.propertiesToGroupBy = ["tipo"]
@@ -180,7 +183,7 @@ class DataManager : NSObject {
             for dictTipo in dict {
                 let d = dictTipo as! Dictionary<String, Any>
                 let t = d["tipo"] ?? ""
-                let c = d["count"] ?? 0
+                let c = d["cuantos"] ?? 0
                 resumen += "      \(c) \(t)\n"
             }
         }
@@ -188,5 +191,11 @@ class DataManager : NSObject {
             
         }
         return resumen
+    }
+    
+    func borrar(objeto:NSManagedObject){
+        persistentContainer.viewContext.delete(objeto)
+        saveContext()
+        NotificationCenter.default.post(name: NSNotification.Name("DELETED_OBJECT"), object:nil)
     }
 }

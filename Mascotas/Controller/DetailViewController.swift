@@ -26,9 +26,24 @@ class DetailViewController: UIViewController {
         detalle.txtGenero.text = laMascota.genero ?? ""
         detalle.txtTipo.text = laMascota.tipo ?? ""
         detalle.txtEdad.text = "\(laMascota.edad)"
+        detalle.btnDelete.addTarget(self, action:#selector(borrar), for:.touchUpInside)
+        
         // TODO: - Si la mascota ya tiene un responsable, ocultar el botón
     }
+    
+    @objc
+    func borrar () {
+        let ac = UIAlertController(title: "CONFIRME", message:"Desea borrar este registro?", preferredStyle: .alert)
+        let action = UIAlertAction(title: "SI", style: .destructive) {
+            alertaction in
+            DataManager.shared.borrar(objeto:self.laMascota)
+            self.dismiss(animated: true)
+        }
+        let action2 = UIAlertAction(title: "NO", style:.cancel)
+        ac.addAction(action)
+        ac.addAction(action2)
+        self.present(ac, animated: true)
 
-
+    }
 }
 
