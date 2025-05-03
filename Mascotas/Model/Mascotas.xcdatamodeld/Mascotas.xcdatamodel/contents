@@ -6,7 +6,7 @@
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="nombre" optional="YES" attributeType="String"/>
         <attribute name="tipo" optional="YES" attributeType="String"/>
-        <relationship name="responsable" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Responsable"/>
+        <relationship name="responsable" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Responsable" inverseName="mascotas" inverseEntity="Responsable"/>
     </entity>
     <entity name="Responsable" representedClassName="Responsable" syncable="YES">
         <attribute name="apellido_materno" optional="YES" attributeType="String"/>
@@ -17,6 +17,6 @@
         <attribute name="estado" optional="YES" attributeType="String"/>
         <attribute name="nombre" optional="YES" attributeType="String"/>
         <attribute name="tel" optional="YES" attributeType="String"/>
-        <relationship name="mascotas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Mascota"/>
+        <relationship name="mascotas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Mascota" inverseName="responsable" inverseEntity="Mascota"/>
     </entity>
 </model>

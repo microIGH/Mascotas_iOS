@@ -119,8 +119,28 @@ class DataManager : NSObject {
         responsables.forEach { responsableVO in
             let responsable = NSManagedObject(entity: entidadDesc, insertInto:persistentContainer.viewContext) as! Responsable
             responsable.inicializa(responsableVO)
+            if let idMascota = responsableVO.duenoDe, idMascota != 0 {
+                if let miMascota = buscaMascotaConId(idMascota) {
+                    responsable.mascotas?.adding(miMascota)
+                    miMascota.responsable = responsable
+                }
+            }
         }
         saveContext()
+    }
+    
+    func buscaMascotaConId(_ idMascota:Int) -> Mascota? {
+        let elQuery = Mascota.fetchRequest()
+        let elFiltro = NSPredicate(format:"id == %d", idMascota)
+        elQuery.predicate = elFiltro
+        do {
+            let tmp = try persistentContainer.viewContext.fetch(elQuery)
+            return tmp.first
+        }
+        catch {
+            print ("no se puede ejecutar el query SELECT * FROM Mascota WHERE id = [n]")
+        }
+        return nil
     }
     
     func todasLasMascotas() -> [Mascota] {

@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         // TODO: - Generar el resumen de la Base de Datos
-        var info = DataManager.shared.resumenMascotas()
+        let info = DataManager.shared.resumenMascotas()
         resumen.tv.text = info
     }
 }

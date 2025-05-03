@@ -29,6 +29,12 @@ class DetailViewController: UIViewController {
         detalle.btnDelete.addTarget(self, action:#selector(borrar), for:.touchUpInside)
         
         // TODO: - Si la mascota ya tiene un responsable, ocultar el botón
+        if laMascota.responsable != nil {
+            detalle.btnAdopt.isHidden = true
+        }
+        else {
+            detalle.btnAdopt.isHidden = false
+        }
     }
     
     @objc
