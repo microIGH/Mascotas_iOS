@@ -14,6 +14,7 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
         detalle = DetailView(frame:view.bounds.insetBy(dx: 40, dy: 40))
         view.addSubview(detalle)
     }
@@ -21,7 +22,10 @@ class DetailViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         // TODO: - Obtener y presentar la información de la mascota
-        
+        detalle.txtNombre.text = laMascota.nombre ?? ""
+        detalle.txtGenero.text = laMascota.genero ?? ""
+        detalle.txtTipo.text = laMascota.tipo ?? ""
+        detalle.txtEdad.text = "\(laMascota.edad)"
         // TODO: - Si la mascota ya tiene un responsable, ocultar el botón
     }
 

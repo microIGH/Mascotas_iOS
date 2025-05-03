@@ -82,6 +82,7 @@ class DataManager : NSObject {
                 }
                 task.resume()
             }
+            ud.setValue(1, forKey: "BD-OK")
         }
         // La BD ya fue sincronizada anteriormente
     }
@@ -120,5 +121,72 @@ class DataManager : NSObject {
             responsable.inicializa(responsableVO)
         }
         saveContext()
+    }
+    
+    func todasLasMascotas() -> [Mascota] {
+        var arreglo = [Mascota]()
+        let elQuery = Mascota.fetchRequest()
+        do {
+            arreglo = try persistentContainer.viewContext.fetch(elQuery)
+        }
+        catch {
+            print ("no se puede ejecutar el query SELECT * FROM Mascota")
+        }
+        return arreglo
+    }
+    
+    func todasLasMascotas(tipo:String) -> [Mascota] {
+        var arreglo = [Mascota]()
+        let elQuery = Mascota.fetchRequest()
+        // [c] significa "case insensitive"
+        let elFiltro = NSPredicate(format:"tipo =[c] %@", tipo)
+        let elFiltro2 = NSPredicate(format:"tipo =[c] %@", "serpiente")
+        let cPredicado = NSCompoundPredicate(orPredicateWithSubpredicates: [elFiltro, elFiltro2])
+        elQuery.predicate = cPredicado
+        do {
+            arreglo = try persistentContainer.viewContext.fetch(elQuery)
+        }
+        catch {
+            print ("no se puede ejecutar el query SELECT * FROM Mascota WHERE tipo='%'")
+        }
+        let sortedA = arreglo.sorted {m1, m2  in
+            return m1.nombre ?? "" > m2.nombre ?? ""  // Descendente
+        }
+        return sortedA
+    }
+    
+    func resumenMascotas() -> String {
+        var resumen = ""
+        let queryM = Mascota.fetchRequest()
+        let queryR = Responsable.fetchRequest()
+        do {
+            let cuenta = try persistentContainer.viewContext.count(for:queryR)
+            resumen = "Hay \(cuenta) responsables\n"
+            let cuenta2 = try persistentContainer.viewContext.count(for:queryM)
+            resumen += "Hay \(cuenta2) mascotas\n"
+            let keypathExp = NSExpression(forKeyPath: "id")
+            let expression = NSExpression(forFunction: "count:", arguments: [keypathExp])
+            let countDesc = NSExpressionDescription()
+            countDesc.expression = expression
+            countDesc.name = "count"
+            countDesc.expressionResultType = .integer64AttributeType
+            let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Mascota")
+            request.resultType = .countResultType
+            request.returnsObjectsAsFaults = false
+            request.propertiesToFetch = ["tipo", countDesc]
+            request.propertiesToGroupBy = ["tipo"]
+            request.resultType = .dictionaryResultType
+            let dict = try persistentContainer.viewContext.fetch(request)
+            for dictTipo in dict {
+                let d = dictTipo as! Dictionary<String, Any>
+                let t = d["tipo"] ?? ""
+                let c = d["count"] ?? 0
+                resumen += "      \(c) \(t)\n"
+            }
+        }
+        catch {
+            
+        }
+        return resumen
     }
 }

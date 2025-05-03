@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D1192FB2DBD42F100D809C3 /* Mascotas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D1192F92DBD42F100D809C3 /* Mascotas.xcdatamodeld */; };
 		3D1193002DBD46E100D809C3 /* Mascota+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1192FC2DBD46E100D809C3 /* Mascota+CoreDataClass.swift */; };
 		3D1193012DBD46E100D809C3 /* Mascota+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1192FD2DBD46E100D809C3 /* Mascota+CoreDataProperties.swift */; };
 		3D1193022DBD46E100D809C3 /* Responsable+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1192FE2DBD46E100D809C3 /* Responsable+CoreDataClass.swift */; };
@@ -19,6 +18,7 @@
 		3D11930D2DC4416200D809C3 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11930C2DC4416200D809C3 /* TableViewController.swift */; };
 		3D11930F2DC441BC00D809C3 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11930E2DC441BC00D809C3 /* DetailView.swift */; };
 		3D1193112DC4522700D809C3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1193102DC4522700D809C3 /* DetailViewController.swift */; };
+		3D1193182DC57E3D00D809C3 /* Mascotas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D1193162DC57E3D00D809C3 /* Mascotas.xcdatamodeld */; };
 		3DBDD8122DBD407400842729 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBDD8112DBD407400842729 /* AppDelegate.swift */; };
 		3DBDD8142DBD407400842729 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBDD8132DBD407400842729 /* SceneDelegate.swift */; };
 		3DBDD8162DBD407400842729 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBDD8152DBD407400842729 /* ViewController.swift */; };
@@ -28,7 +28,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3D1192FA2DBD42F100D809C3 /* Sesion8.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sesion8.xcdatamodel; sourceTree = "<group>"; };
 		3D1192FC2DBD46E100D809C3 /* Mascota+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mascota+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3D1192FD2DBD46E100D809C3 /* Mascota+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mascota+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3D1192FE2DBD46E100D809C3 /* Responsable+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Responsable+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -40,6 +39,7 @@
 		3D11930C2DC4416200D809C3 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		3D11930E2DC441BC00D809C3 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		3D1193102DC4522700D809C3 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3D1193172DC57E3D00D809C3 /* Mascotas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mascotas.xcdatamodel; sourceTree = "<group>"; };
 		3DBDD80E2DBD407400842729 /* Mascotas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mascotas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DBDD8112DBD407400842729 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DBDD8132DBD407400842729 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,9 +96,9 @@
 				3D1192FD2DBD46E100D809C3 /* Mascota+CoreDataProperties.swift */,
 				3D1192FE2DBD46E100D809C3 /* Responsable+CoreDataClass.swift */,
 				3D1192FF2DBD46E100D809C3 /* Responsable+CoreDataProperties.swift */,
-				3D1192F92DBD42F100D809C3 /* Mascotas.xcdatamodeld */,
 				3D1193042DBD4B8C00D809C3 /* ResponsableVO.swift */,
 				3D1193062DBD4C7200D809C3 /* MascotaVO.swift */,
+				3D1193162DC57E3D00D809C3 /* Mascotas.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -205,7 +205,6 @@
 				3D1193072DBD4C7200D809C3 /* MascotaVO.swift in Sources */,
 				3D1193032DBD46E100D809C3 /* Responsable+CoreDataProperties.swift in Sources */,
 				3D1193022DBD46E100D809C3 /* Responsable+CoreDataClass.swift in Sources */,
-				3D1192FB2DBD42F100D809C3 /* Mascotas.xcdatamodeld in Sources */,
 				3DBDD8162DBD407400842729 /* ViewController.swift in Sources */,
 				3DBDD8122DBD407400842729 /* AppDelegate.swift in Sources */,
 				3DBDD8142DBD407400842729 /* SceneDelegate.swift in Sources */,
@@ -213,6 +212,7 @@
 				3D1193112DC4522700D809C3 /* DetailViewController.swift in Sources */,
 				3D1193012DBD46E100D809C3 /* Mascota+CoreDataProperties.swift in Sources */,
 				3D1193002DBD46E100D809C3 /* Mascota+CoreDataClass.swift in Sources */,
+				3D1193182DC57E3D00D809C3 /* Mascotas.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,14 +437,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		3D1192F92DBD42F100D809C3 /* Mascotas.xcdatamodeld */ = {
+		3D1193162DC57E3D00D809C3 /* Mascotas.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				3D1192FA2DBD42F100D809C3 /* Sesion8.xcdatamodel */,
+				3D1193172DC57E3D00D809C3 /* Mascotas.xcdatamodel */,
 			);
-			currentVersion = 3D1192FA2DBD42F100D809C3 /* Sesion8.xcdatamodel */;
-			name = Mascotas.xcdatamodeld;
-			path = ../../../../../../../../Downloads/Mascotas.xcdatamodeld;
+			currentVersion = 3D1193172DC57E3D00D809C3 /* Mascotas.xcdatamodel */;
+			path = Mascotas.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
