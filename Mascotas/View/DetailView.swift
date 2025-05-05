@@ -15,6 +15,7 @@ class DetailView: UIView {
     let txtGenero = UITextField()
     let txtEdad = UITextField()
     let btnAdopt = UIButton(type: .custom)
+    let lblResponsable = UILabel()
     
     override func draw(_ rect: CGRect) {
         // Crear el stack view
@@ -46,6 +47,10 @@ class DetailView: UIView {
         btnAdopt.backgroundColor = .red
         btnAdopt.setTitle("Adoptar", for: .normal)
         stackView.addArrangedSubview(btnAdopt)
+        
+        lblResponsable.backgroundColor = .red.withAlphaComponent(0.5)
+        lblResponsable.textColor = .white
+        stackView.addArrangedSubview(lblResponsable)
         
         btnDelete.setImage(UIImage(systemName: "pip.remove"), for: .normal)
         stackView.addArrangedSubview(btnDelete)

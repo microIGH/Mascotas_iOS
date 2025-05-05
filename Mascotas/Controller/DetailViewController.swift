@@ -31,9 +31,16 @@ class DetailViewController: UIViewController {
         // TODO: - Si la mascota ya tiene un responsable, ocultar el botón
         if laMascota.responsable != nil {
             detalle.btnAdopt.isHidden = true
+            let ownerInfo = ((laMascota.responsable?.nombre) ?? "") + " " + ((laMascota.responsable?.apellido_paterno) ?? "")
+            detalle.lblResponsable.isHidden = false
+            detalle.lblResponsable.frame.size.height = 50
+            detalle.lblResponsable.text = "Dueño: \(ownerInfo)"
+            detalle.lblResponsable.sizeToFit()
         }
         else {
             detalle.btnAdopt.isHidden = false
+            detalle.lblResponsable.isHidden = true
+            detalle.lblResponsable.frame.size.height = 0
         }
     }
     

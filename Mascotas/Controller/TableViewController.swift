@@ -9,7 +9,15 @@ import UIKit
 
 class TableViewController: UITableViewController {
     var mascotas = [Mascota]()
-
+    let filtro = UISegmentedControl(items: ["Todos", "Gatos", "Perros", "Aves", "Otros"])
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        filtro.selectedSegmentIndex = 0
+        filtro.addTarget(self, action:#selector(actualizar), for:.valueChanged)
+        tableView.tableHeaderView = filtro
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         actualizar()
@@ -18,8 +26,14 @@ class TableViewController: UITableViewController {
     
     @objc
     func actualizar() {
-        // TODO: - Obtener todas las mascotas
-        mascotas = DataManager.shared.todasLasMascotas()
+        // Considerar el valor seleccionado en el filtro
+        switch filtro.selectedSegmentIndex {
+            case 1:mascotas = DataManager.shared.todasLasMascotas(tipo: "gato")
+            case 2:mascotas = DataManager.shared.todasLasMascotas(tipo:"perro")
+            case 3:mascotas = // TODO: - Crea el método necesario
+            case 4:mascotas = // TODO: - Crea el método necesario
+            default:mascotas = DataManager.shared.todasLasMascotas()
+        }
         tableView.reloadData()
     }
 
@@ -45,7 +59,9 @@ class TableViewController: UITableViewController {
         let m = mascotas[indexPath.row]
         let dv = DetailViewController()
         dv.laMascota = m
-        dv.modalPresentationStyle = .automatic
-        self.present(dv, animated:true)
+        // Si decidimos no usar navigation controller:
+        // dv.modalPresentationStyle = .automatic
+        // self.present(dv, animated:true)
+        self.navigationController?.pushViewController(dv, animated: true)
     }
 }

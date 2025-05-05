@@ -160,9 +160,7 @@ class DataManager : NSObject {
         let elQuery = Mascota.fetchRequest()
         // [c] significa "case insensitive"
         let elFiltro = NSPredicate(format:"tipo =[c] %@", tipo)
-        let elFiltro2 = NSPredicate(format:"tipo =[c] %@", "serpiente")
-        let cPredicado = NSCompoundPredicate(orPredicateWithSubpredicates: [elFiltro, elFiltro2])
-        elQuery.predicate = cPredicado
+        elQuery.predicate = elFiltro
         do {
             arreglo = try persistentContainer.viewContext.fetch(elQuery)
         }
