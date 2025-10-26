@@ -1,69 +1,74 @@
-//
-//  DetailView.swift
-//  Pets
-//
-//  Created by Ángel González on 19/10/24.
-//
-
 import UIKit
 
 class DetailView: UIView {
-    
     let btnDelete = UIButton(type: .system)
     let txtNombre = UITextField()
     let txtTipo = UITextField()
     let txtGenero = UITextField()
     let txtEdad = UITextField()
-    let btnAdopt = UIButton(type: .custom)
-    let lblResponsable = UILabel()
+    let btnAdopt = UIButton(type: .system)
+    let lblDuenio = UILabel()
+    var foto: UIImageView!
+
     
     override func draw(_ rect: CGRect) {
-        // Crear el stack view
         let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 5
+        stackView.alignment = .fill
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         
-        // Configurar propiedades del stack view
-        stackView.axis = .vertical // Disposición vertical
-        stackView.spacing = 15 // Espaciado entre los elementos
-        stackView.alignment = .fill // Alinear a llenar el espacio
-        stackView.translatesAutoresizingMaskIntoConstraints = false // Utilizar Auto Layout
+        self.backgroundColor = .black
         
-        // Agregamos los elementos:
-        txtNombre.borderStyle = .roundedRect // Estilo del borde
-        txtNombre.placeholder = "Nombre" // Texto de marcador
-        stackView.addArrangedSubview(txtNombre) // Agregar al stack view
+        foto = UIImageView(image:UIImage(named: "mascotas"));
+        foto.contentMode = .scaleAspectFit
         
-        txtGenero.borderStyle = .roundedRect // Estilo del borde
-        txtGenero.placeholder = "Género" // Texto de marcador
-        stackView.addArrangedSubview(txtGenero) // Agregar al stack view
+        // Configurar campos
+        let campos = [txtNombre, txtGenero, txtTipo, txtEdad]
+        campos.forEach {
+            $0.borderStyle = .roundedRect
+            $0.isUserInteractionEnabled = false
+            $0.heightAnchor.constraint(equalToConstant: 45).isActive = true
+            
+            $0.textColor = .white
+            $0.backgroundColor = .darkGray
+        }
         
-        txtTipo.borderStyle = .roundedRect // Estilo del borde
-        txtTipo.placeholder = "Tipo" // Texto de marcador
-        stackView.addArrangedSubview(txtTipo) // Agregar al stack view
+        txtNombre.placeholder = "Nombre"
+        txtGenero.placeholder = "Género"
+        txtTipo.placeholder = "Tipo"
+        txtEdad.placeholder = "Edad"
         
-        txtEdad.borderStyle = .roundedRect // Estilo del borde
-        txtEdad.placeholder = "Edad" // Texto de marcador
-        stackView.addArrangedSubview(txtEdad) // Agregar al stack view
+        // Botón Adoptar
+        btnAdopt.setTitle("ADOPTAR", for: .normal)
+        btnAdopt.backgroundColor = .systemBlue
+        btnAdopt.setTitleColor(.white, for: .normal)
+        btnAdopt.layer.cornerRadius = 10
+        btnAdopt.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        btnAdopt.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
-        btnAdopt.backgroundColor = .red
-        btnAdopt.setTitle("Adoptar", for: .normal)
+        // Botón Eliminar
+        btnDelete.setImage(UIImage(systemName: "trash"), for: .normal)
+        btnDelete.tintColor = .red
+        btnDelete.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        
+        lblDuenio.font = UIFont.systemFont(ofSize: 14, weight:.bold)
+        lblDuenio.textColor = .white
+        // Añadir elementos
+        stackView.addArrangedSubview(foto)
+        campos.forEach { stackView.addArrangedSubview($0) }
+        stackView.addArrangedSubview(lblDuenio)
         stackView.addArrangedSubview(btnAdopt)
-        
-        lblResponsable.backgroundColor = .red.withAlphaComponent(0.5)
-        lblResponsable.textColor = .white
-        stackView.addArrangedSubview(lblResponsable)
-        
-        btnDelete.setImage(UIImage(systemName: "pip.remove"), for: .normal)
         stackView.addArrangedSubview(btnDelete)
         
-        // Agregar el stack view a la vista principal
         self.addSubview(stackView)
-        
-        // Configurar las restricciones del stack view
+        //Constraints
         NSLayoutConstraint.activate([
-            stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor), // Centrar horizontalmente
-            stackView.centerYAnchor.constraint(equalTo: self.centerYAnchor), // Centrar verticalmente
-            stackView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8) // Ancho del stack view
+            foto.widthAnchor.constraint(equalToConstant: 120),
+            foto.heightAnchor.constraint(equalToConstant: 120),
+            stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            stackView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8),
+            stackView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.8)
         ])
     }
-
 }

@@ -25,6 +25,9 @@
 		3DBDD8192DBD407400842729 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBDD8172DBD407400842729 /* Main.storyboard */; };
 		3DBDD81E2DBD407800842729 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DBDD81D2DBD407800842729 /* Assets.xcassets */; };
 		3DBDD8212DBD407800842729 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBDD81F2DBD407800842729 /* LaunchScreen.storyboard */; };
+		4AABF1A52EAB3E9B008A4895 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AABF1A42EAB3E9B008A4895 /* IntroViewController.swift */; };
+		A8A402082EAE05AC00CCEDDA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A8A402072EAE05AC00CCEDDA /* Alamofire */; };
+		FA3E51AC2DC6DFA800B57508 /* ResponsablePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3E51AB2DC6DFA400B57508 /* ResponsablePickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,8 @@
 		3DBDD81D2DBD407800842729 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DBDD8202DBD407800842729 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DBDD8222DBD407800842729 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AABF1A42EAB3E9B008A4895 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		FA3E51AB2DC6DFA400B57508 /* ResponsablePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsablePickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8A402082EAE05AC00CCEDDA /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,12 +123,14 @@
 		3DBDD82A2DBD413200842729 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FA3E51AB2DC6DFA400B57508 /* ResponsablePickerViewController.swift */,
 				3DBDD8112DBD407400842729 /* AppDelegate.swift */,
 				3DBDD8132DBD407400842729 /* SceneDelegate.swift */,
 				3DBDD8152DBD407400842729 /* ViewController.swift */,
 				3D1193082DBD54E500D809C3 /* DataManager.swift */,
 				3D11930C2DC4416200D809C3 /* TableViewController.swift */,
 				3D1193102DC4522700D809C3 /* DetailViewController.swift */,
+				4AABF1A42EAB3E9B008A4895 /* IntroViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -171,6 +179,9 @@
 				Base,
 			);
 			mainGroup = 3DBDD8052DBD407400842729;
+			packageReferences = (
+				A8A402062EAE05AC00CCEDDA /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 3DBDD80F2DBD407400842729 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -205,10 +216,12 @@
 				3D1193072DBD4C7200D809C3 /* MascotaVO.swift in Sources */,
 				3D1193032DBD46E100D809C3 /* Responsable+CoreDataProperties.swift in Sources */,
 				3D1193022DBD46E100D809C3 /* Responsable+CoreDataClass.swift in Sources */,
+				4AABF1A52EAB3E9B008A4895 /* IntroViewController.swift in Sources */,
 				3DBDD8162DBD407400842729 /* ViewController.swift in Sources */,
 				3DBDD8122DBD407400842729 /* AppDelegate.swift in Sources */,
 				3DBDD8142DBD407400842729 /* SceneDelegate.swift in Sources */,
 				3D1193092DBD54E500D809C3 /* DataManager.swift in Sources */,
+				FA3E51AC2DC6DFA800B57508 /* ResponsablePickerViewController.swift in Sources */,
 				3D1193112DC4522700D809C3 /* DetailViewController.swift in Sources */,
 				3D1193012DBD46E100D809C3 /* Mascota+CoreDataProperties.swift in Sources */,
 				3D1193002DBD46E100D809C3 /* Mascota+CoreDataClass.swift in Sources */,
@@ -364,7 +377,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = E9KS5E39JS;
+				DEVELOPMENT_TEAM = 4F34Y242XV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mascotas/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -377,8 +390,12 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.janzelaznog.ddadm13.Mascotas;
+				PRODUCT_BUNDLE_IDENTIFIER = com.garcia.disrael.Mascotas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -392,7 +409,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = E9KS5E39JS;
+				DEVELOPMENT_TEAM = 4F34Y242XV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mascotas/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -405,8 +422,12 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.janzelaznog.ddadm13.Mascotas;
+				PRODUCT_BUNDLE_IDENTIFIER = com.garcia.disrael.Mascotas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -435,6 +456,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A8A402062EAE05AC00CCEDDA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A8A402072EAE05AC00CCEDDA /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8A402062EAE05AC00CCEDDA /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		3D1193162DC57E3D00D809C3 /* Mascotas.xcdatamodeld */ = {
