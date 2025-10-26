@@ -28,7 +28,7 @@ class IntroViewController: UIViewController {
              return
          }
          
-         print("✅ URL del video creada correctamente")
+         print("URL del video creada correctamente")
         
         // Crear el reproductor de video
         videoPlayer = AVPlayer(url: videoURL)
